@@ -1,0 +1,2 @@
+
+[2018-11-01 15:00:37,552,INFO] return value: 0 (ssh 10.10.6.33 /data/jmap/restartHadesServer.sh 10.10.6.33 9023 /data/app/hades-cod-reps/)
