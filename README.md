@@ -32,7 +32,7 @@ hades-exeshell-server - 执行shell接口服务
     配置bash脚本所在服务器位置
     格式：
           远程目录：
-              bash_server = "ssh 10.10.6.33 /data/jmap/"
+              bash_server = "ssh 127.0.0.33 /data/jmap/"
           本地目录：（即hades-exeshell-server和bashserver在同一机器）
               bash_server = "/data/jmap/" 
 2. MonitorExeShellServer.bash_restart
