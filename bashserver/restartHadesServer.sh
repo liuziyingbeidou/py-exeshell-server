@@ -22,7 +22,7 @@ if [ "$native_ip" == "$ip" ]; then
   echo "---分发脚本 开始---"
   mkdir -p $deploy_path/bin
   sleep 3
-  cp -p ./template/restart.sh $deploy_path/bin/
+  cp -p ./template/{restart.sh,show-busy-java-threads} $deploy_path/bin/
   echo "---分发脚本 结束---"
   sleep 3
   echo "-----($ip:$port)重启服务_开始-----"
@@ -32,7 +32,7 @@ else
   echo "---分发脚本 开始---"
   scp $ip "mkdir -p $deploy_path/bin"
   sleep 3
-  scp -p ./template/restart.sh $ip:$deploy_path/bin/
+  scp -p ./template/{restart.sh,show-busy-java-threads} $ip:$deploy_path/bin/
   echo "---分发脚本 结束---"
   sleep 3
   echo "-----($ip:$port)重启服务_开始-----"

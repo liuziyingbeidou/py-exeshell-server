@@ -7,7 +7,7 @@ echo "进程号：$PID"
 if [ -n "$PID" ]
 then
 	echo "服务PID: $PID, 将要kill"
-	kill $PID
+	kill -9 $PID
 	exit -1
 else
 	echo "找不到要停止的服务，端口号: $1"
