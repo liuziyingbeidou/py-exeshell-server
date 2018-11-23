@@ -36,6 +36,6 @@ else
   echo "---分发脚本 结束---"
   sleep 3
   echo "-----($ip:$port)停止服务_开始-----"
-  ssh $ip "$deploy_path/bin/stop.sh $port"
+  ssh $ip "source /etc/profile;$deploy_path/bin/stop.sh $port"
   echo "-----($ip:$port)停止服务_结束-----"
 fi

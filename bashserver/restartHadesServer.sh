@@ -30,12 +30,12 @@ if [ "$native_ip" == "$ip" ]; then
   echo "-----($ip:$port)重启服务_结束-----"
 else
   echo "---分发脚本 开始---"
-  scp $ip "mkdir -p $deploy_path/bin"
+  ssh $ip "mkdir -p $deploy_path/bin"
   sleep 3
   scp -p ./template/{restart.sh,show-busy-java-threads} $ip:$deploy_path/bin/
   echo "---分发脚本 结束---"
   sleep 3
   echo "-----($ip:$port)重启服务_开始-----"
-  ssh $ip "$deploy_path/bin/restart.sh $port $deploy_path"
+  ssh $ip "source /etc/profile;$deploy_path/bin/restart.sh $port $deploy_path"
   echo "-----($ip:$port)重启服务_结束-----"
 fi
